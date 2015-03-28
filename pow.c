@@ -1,19 +1,26 @@
 #include <stdio.h>
+#define LEN 5
+#define WID 5
+long power(long, long);
 
-float power(float, float);
 int main()
 {
-	float i;
+	long i, j;
 
-	for(i=0; i <=10; ++i)
-		printf("%d\t %f\t %f\n", i, power(2,i) power(3,i));
+	for(i=1; i <=LEN; ++i)
+	{
+		for(j=1; j<=WID; ++j)
+			printf("%ld\t", power(i, j));
+		printf("\n");
+	}
 	return 0;
 }
-float power(float base, float n)
+long power(long base, long n)
 {
-	float p;
-	
-	for(p=1; n>0; --n)
+	long p = 1;
+	n *= -1;
+	// do multiplication n times
+	while ((int)n++)
 		p=p*base;
 	return p;
 }
