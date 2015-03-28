@@ -24,12 +24,16 @@ int main(void)
     if(max>0)
         printf("%s",maxline);
 }
-    
-
 int mgetline(char s[],int lim)
 {
     int i,c;
-
+    for(i=0; i<lim-1; ++i)
+        if(c==EOF)
+            break;
+        if(=='\n')
+            break;
+        return i;
+    /*
     for(i=0;i<lim-1 && (c=getchar())!=EOF && c !='\n';++i)
         s[i] = c;
 
@@ -41,8 +45,10 @@ int mgetline(char s[],int lim)
 
     s[i] = '\0';
     return i;
-}
+    */
 
+
+}
 void copy(char to[],char from[])
 {
     int i;
