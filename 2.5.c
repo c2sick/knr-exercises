@@ -1,5 +1,5 @@
 #include <stdio.h>
-#define MAXLINE 1000;
+#define MAXLINE 1000
 
 int mgetline(char line[], int maxline);
 int any(char s1[], char s2[]);
@@ -41,4 +41,3 @@ int any(char s1[], char s2[]){//do checking for match.
 	else 
 		return i;
 }
-
