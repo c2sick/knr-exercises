@@ -4,14 +4,14 @@
  * be a symbolic constant or a variable?
  * constant. 
  */
-#define TABWIDTH 8
+#define TABWIDTH 4
 /* program name: de-tab 
 */
 int main(void)
 {
 	int col, c;
 	col = 0;
-	while(c = getchar() != EOF)
+	while ((c = getchar()) != EOF)
 	{//check char for tab 
 		if (c == '\t')
 		{// routine for replacing tab with blank
@@ -26,7 +26,7 @@ int main(void)
 				++col;
 			}
 		}
-		else // routine for all other actions 
+		else // routine for non-tab.
 		{
 			if (c == '\n')
 			{
